@@ -1,0 +1,11 @@
+#ifndef COMPONENTS_H
+#define COMPONENTS_H
+
+// Component IDs
+enum {
+    COMPONENT_TRANSFORM = 0,
+    COMPONENT_MESH,
+    COMPONENT_CAMERA
+};
+
+#endif//COMPONENTS_H
