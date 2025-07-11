@@ -11,7 +11,7 @@ Features
 - Triangulated .obj file support (no materials or textures)
 - Lightweight ECS architecture with transform, camera, and mesh components
 - Basic camera movement system
-- Wireframe/solid rendering via OpenGL
+- solid color rendering via OpenGL
 - Simple frame rate limiter
 
 Not Included
