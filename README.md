@@ -69,9 +69,14 @@ This project currently supports Windows (uses <Windows.h> for timing). Requires:
 Loading a Mesh
 --------------
 
+```C
 char* obj_file_data = file_read_local("/Assets/Models/cube.obj");
 Mesh mesh = mesh_load_obj(obj_file_data);
 free(obj_file_data);
+```
+
+<img width="1282" height="999" alt="image" src="https://github.com/user-attachments/assets/6b630e40-60bc-4948-9c0a-59c7cddd29a8" />
+
 
 Goals
 -----
