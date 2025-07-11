@@ -137,12 +137,24 @@ void renderer_draw_mesh(const Mesh mesh, const Transform model_transform, const 
     Mat4 view = mat4_look_at(camera_transform.position, camera_transform.forward, camera_transform.up);
     Mat4 projection = mat4_perspective(camera.fov, camera.aspect, camera.near_plane, camera.far_plane);
 
+    //assign model matrix
+	GLint modelLocation = glGetUniformLocation(program, "model");
+	glUniformMatrix4fv(modelLocation, 1, GL_FALSE, &model.m[0][0]);
+
+    //assign view matrix
+	GLint viewLocation = glGetUniformLocation(program, "view");
+	glUniformMatrix4fv(viewLocation, 1, GL_FALSE, &view.m[0][0]);
+
+	GLint projectionLocation = glGetUniformLocation(program, "projection");
+	glUniformMatrix4fv(projectionLocation, 1, GL_FALSE, &projection.m[0][0]);
+    
+
     // Create MVP
-    Mat4 mvp = mat4_multiply(projection, mat4_multiply(view, model));
+    /*Mat4 mvp = mat4_multiply(projection, mat4_multiply(view, model));
 
     //assign MVP
     GLint mvpLocation = glGetUniformLocation(program, "MVP");
-    glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, &mvp.m[0][0]);
+    glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, &mvp.m[0][0]);*/
 
     //set vertex buffer data
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);

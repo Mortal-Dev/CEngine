@@ -38,7 +38,7 @@ int main(void)
     Mesh mesh = mesh_load_obj(obj_file_data);
     free(obj_file_data);
     Transform mesh_transform = { 0 };
-    mesh_transform.position = (Vec3f){ 0, 0.0f, -5.0f };
+    mesh_transform.position = (Vec3f){ 0.0f, 0.0f, 5.0f };
     mesh_transform.scale = (Vec3f){ 1.0f, 1.0f, 1.0f };
     Entity mesh_entity = entity_create();
     mesh_add(mesh_entity, mesh);

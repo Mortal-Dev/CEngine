@@ -34,7 +34,7 @@ static void process_rotation(Transform* transform)
     Vec2f mouse_delta = input_get_mouse_delta();
 
     // apply mouse movement to yaw (left/right)
-    transform->rotation.y += mouse_delta.x * mouse_sensitivity;
+    transform->rotation.y += -mouse_delta.x * mouse_sensitivity;
 
     // normalize yaw to stay within 0-360 degrees
     /*transform->rotation.y = fmodf(transform->rotation.y, 360.0f);
@@ -44,10 +44,11 @@ static void process_rotation(Transform* transform)
     }*/
 
     // apply mouse movement to pitch (up/down)
-    float pitch_delta = mouse_delta.y * mouse_sensitivity;
+    float pitch_delta = -mouse_delta.y * mouse_sensitivity;
     transform->rotation.x -= pitch_delta;
 
-	transform->rotation.x = clamp(transform->rotation.x, -90.0f, 90.0f);
+	//transform->rotation.x = clamp(transform->rotation.x, -180.0f, 90.0f);
+	
 }
 
 static void camera_move_system_update(float delta_time) 
