@@ -27,22 +27,30 @@ This project does NOT support:
 Project Structure
 -----------------
 
+```
 core/
     seethe.h           - Logging/debugging
+    
     file.h             - File utilities
+    
     stopwatch.h        - Simple timer
-
+```
+```
 gfx/
     renderer.h         - OpenGL rendering backend
-
+```
+```
 resources/
     mesh_loader.h      - .obj mesh loader
-
+```
+```
 ecs/
     core_components/   - Basic ECS components like mesh
+    
     components.h       - Component definitions
+    
     systems/           - Update systems (render, transform, camera)
-
+```
 Main Loop Example
 -----------------
 ```C
