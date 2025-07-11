@@ -45,7 +45,7 @@ ecs/
 
 Main Loop Example
 -----------------
-
+```C
 while (renderer_should_update(window))
 {
     stopwatch_start(&stopwatch);
@@ -56,7 +56,7 @@ while (renderer_should_update(window))
     delta_time = stopwatch_stop(&stopwatch);
     delay_to_target_frame_rate(delta_time, target_frame_rate);
 }
-
+```
 Building
 --------
 
