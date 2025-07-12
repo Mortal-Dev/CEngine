@@ -74,7 +74,8 @@ This project currently supports Windows (uses <Windows.h> for timing). Requires:
 - OpenGL 3.x+
 - C compiler (tested with MSVC)
 - link against glew32s.lib
-
+- use X86
+  
 Loading a Mesh
 --------------
 
