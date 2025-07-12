@@ -72,7 +72,6 @@ int main(void)
 
         input_update();
 
-        //update systems
         update_systems(delta_time);
 
         renderer_update(window);
